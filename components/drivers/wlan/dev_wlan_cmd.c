@@ -56,37 +56,35 @@ static int wifi_debug_set_autoconnect(int argc, char *argv[]);
 #endif
 
 /* cmd table */
-static const struct wifi_cmd_des cmd_tab[] =
-{
-    {"scan", wifi_scan},
-    {"help", wifi_help},
-    {"status", wifi_status},
-    {"join", wifi_join},
-    {"ap", wifi_ap},
-    {"list_sta", wifi_list_sta},
-    {"disc", wifi_disconnect},
-    {"ap_stop", wifi_ap_stop},
-    {"smartconfig", RT_NULL},
+static const struct wifi_cmd_des cmd_tab[] = {
+    { "scan", wifi_scan },
+    { "help", wifi_help },
+    { "status", wifi_status },
+    { "join", wifi_join },
+    { "ap", wifi_ap },
+    { "list_sta", wifi_list_sta },
+    { "disc", wifi_disconnect },
+    { "ap_stop", wifi_ap_stop },
+    { "smartconfig", RT_NULL },
 #ifdef RT_WLAN_CMD_DEBUG
-    {"-d", wifi_debug},
+    { "-d", wifi_debug },
 #endif
 };
 
 #ifdef RT_WLAN_CMD_DEBUG
 /* debug cmd table */
-static const struct wifi_cmd_des debug_tab[] =
-{
-    {"save_cfg", wifi_debug_save_cfg},
-    {"dump_cfg", wifi_debug_dump_cfg},
-    {"clear_cfg", wifi_debug_clear_cfg},
+static const struct wifi_cmd_des debug_tab[] = {
+    { "save_cfg", wifi_debug_save_cfg },
+    { "dump_cfg", wifi_debug_dump_cfg },
+    { "clear_cfg", wifi_debug_clear_cfg },
 #ifdef RT_WLAN_PROT_ENABLE
-    {"dump_prot", wifi_debug_dump_prot},
-    {"mode", wifi_debug_set_mode},
-    {"prot", wifi_debug_set_prot},
+    { "dump_prot", wifi_debug_dump_prot },
+    { "mode", wifi_debug_set_mode },
+    { "prot", wifi_debug_set_prot },
 #else
-    {"mode", wifi_debug_set_mode },
+    { "mode", wifi_debug_set_mode },
 #endif /* RT_WLAN_PROT_ENABLE */
-    {"auto", wifi_debug_set_autoconnect },
+    { "auto", wifi_debug_set_autoconnect },
 };
 #endif
 
